@@ -1,0 +1,18 @@
+{
+    "name": "Server",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "joaor",
+    "contributors": [],
+    "dependencies": {
+        "@gd-com/utils": "^4.1.0",
+        "mysql": "^2.18.1",
+        "nodemon": "^2.0.4"
+    }
+}
