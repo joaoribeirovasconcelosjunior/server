@@ -1,3 +1,3 @@
 const app = require("./src/app.js");
 
-app.listem(3000);
+app.listen(3000);
