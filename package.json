@@ -1,18 +1,27 @@
 {
-    "name": "Server",
-    "version": "1.0.0",
-    "keywords": [
-        "util",
-        "functional",
-        "server",
-        "client",
-        "browser"
-    ],
-    "author": "joaor",
-    "contributors": [],
-    "dependencies": {
-        "@gd-com/utils": "^4.1.0",
-        "mysql": "^2.18.1",
-        "nodemon": "^2.0.4"
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoribeirovasconcelosjunior/server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoribeirovasconcelosjunior/server/issues"
+  },
+  "homepage": "https://github.com/joaoribeirovasconcelosjunior/server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.21.11"
+  }
 }
