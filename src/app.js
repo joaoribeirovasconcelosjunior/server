@@ -87,7 +87,7 @@ app.use(function (req, res) {
   res.status(400).json({notFound: true, code: 404});
 
 });
-app.listen(3000, () => {
-  console.log(`rodando`);
-});
+
+
+module.exports = app;
 
