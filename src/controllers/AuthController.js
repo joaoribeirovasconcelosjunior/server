@@ -24,14 +24,6 @@ function errorCatchHandler(error,req,res) {
 
 module.exports = {
 
- errorCatchHandler(error,req,res) {
-  console.error(error);
-
-  res.status(error.statusCode || 500).json({ error: true, msg: error.message});
-
-},
-
-
 async  createUserHandler (req,res) {
   try {
     const { user,password } = req.body;
