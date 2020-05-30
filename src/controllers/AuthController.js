@@ -27,6 +27,7 @@ module.exports = {
 async  createUserHandler (req,res) {
   try {
     const { user,password } = req.body;
+    console.log(req.body);
 
     demandString(user); // verifica se é uma string
     demandString(password);

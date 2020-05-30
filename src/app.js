@@ -2,6 +2,9 @@ const express =  require("express");
 const app = express();
 const routes = require("./routes");
 
+const connection = require("./connection");
+console.log(connection);
+
 app.use(routes);
 app.use((req,res, next) => {
   const erro = new Error("route not found");
