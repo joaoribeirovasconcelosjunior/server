@@ -3,8 +3,11 @@ const app = express();
 const routes = require("./routes");
 
 const connection = require("./connection");
-console.log(connection);
 
+require('./database/index');
+
+console.log(connection);
+app.use(express.json());
 app.use(routes);
 app.use((req,res, next) => {
   const erro = new Error("route not found");
