@@ -8,7 +8,7 @@ module.exports = {
       const { name, password } = req.body;
       await User.create({
         name: name,
-        password: password
+        password: password,
       });
       return res.json({ mesage: "ok" });
     }

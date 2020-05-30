@@ -1,3 +1,14 @@
+/*module.exports = {
+  dialect: 'mysql',
+  host: "localhost",
+  username: "root",
+  database: "sequelizedb",
+  password: "6d6i3",
+  define: {
+    timestamps: true,
+  },
+};*/
+
 module.exports = {
 
   dialect: 'postgres',
@@ -8,9 +19,10 @@ module.exports = {
   username: "postgres",
   database: "joaor",
   password: "docker",
+  port: 5432,
   define: {
     timestamps: true,
-    uderscored: true,
+    underscored: true,
 
   },
 };
