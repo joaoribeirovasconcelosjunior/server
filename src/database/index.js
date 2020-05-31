@@ -2,6 +2,9 @@ const Sequelize = require('sequelize');
 const dbConfig = require("../config/database");
 
 const User = require("../models/User");
+const Addreses = require("../models/Addreses");
+
+
 console.log(User);
 
 const connection = new Sequelize(dbConfig);
@@ -11,7 +14,9 @@ connection.authenticate().then(function (){
   .catch(function(erro){
     console.log("DataBase[Error]"+erro)});
 
-
 User.init(connection); // é passado o connection para o construtor
+Addreses.init(connection); // é passado o connection para o construtor
+
+
 
 module.exports = connection;

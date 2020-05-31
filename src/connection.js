@@ -1,5 +1,9 @@
 
 /* NÃO UTILIZADO PODE DESCONSIDERAR*/
+/* IGNORAR NÂO ESTE CODÍGO NÂO ESTÁ SENDO USADO */
+/* IGNORAR NÂO ESTE CODÍGO NÂO ESTÁ SENDO USADO */
+/* IGNORAR NÂO ESTE CODÍGO NÂO ESTÁ SENDO USADO */
+
 
 const dbconnection = require("./config/database");
 const Sequelize = require("sequelize");

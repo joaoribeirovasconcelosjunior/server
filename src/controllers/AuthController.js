@@ -1,5 +1,7 @@
 
-/* NÃO UTILIZADO PODE DESCONSIDERAR*/
+/* IGNORAR NÂO ESTE CODÍGO NÂO ESTÁ SENDO USADO */
+/* IGNORAR NÂO ESTE CODÍGO NÂO ESTÁ SENDO USADO */
+/* IGNORAR NÂO ESTE CODÍGO NÂO ESTÁ SENDO USADO */
 
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -56,6 +58,7 @@ async  LoginUserHandler(req,res) {
 
    demandString(user);
    demandString(password);
+
    if(!userDB[user]) {
      const error = new Error(`User ${user} NOT registed!`);
      error.statusCode = 400;
@@ -63,6 +66,7 @@ async  LoginUserHandler(req,res) {
      throw error;
    }
    const { hashedPassword } = userDB[user];
+   console.log(hashedPassword);
 
    if (!await bcrypt.compare(password,hashedPassword)) {
      const error = new Error(`Invalid login/password`);
