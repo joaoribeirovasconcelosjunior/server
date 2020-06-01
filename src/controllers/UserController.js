@@ -22,21 +22,24 @@ module.exports = {
   async login( req, res ) {
     try {
 
-      const { name, password } = req.body;
+      const { name, password, email } = req.body;
       const user = await User.findAll({where: {
-        name: name,
+        email: email,
       }});
 
       /* essa verificação não é muito interessante mais é a que eu sei fazer*/
 
       if (user != ''){
+
         const hashPassword = user.map(i => {
           return i.password;
         });
-        var x = hashPassword.toString();
-        console.log("chegou");
-        if (await bcrypt.compare(password,x)){
-          const token = jwt.sign({name}, jwtSecret);
+        const hasPASS = hashPassword.toString();
+
+        if (await bcrypt.compare(password,hasPASS)){
+          const token = jwt.sign({name}, jwtSecret, {
+            expiresIn: 86400,
+          });
           return res.status(200).json({jwt: token});
         }
         else{
@@ -55,18 +58,18 @@ module.exports = {
 
   async register(req,res){
     try {
-      const { name, password } = req.body;
+      const { name, password, email } = req.body;
 
-      const user = await User.findAll({where: {
-        name: name,
+      const EMAIL = await User.findAll({where: {
+        email: email,
       }});
-      console.log(`usuario é ${user}`);
 
       /* essa verificação não é muito interessante mais é a que eu sei fazer*/
-      if (user == ''){
+      if (EMAIL == ''){
         await User.create({
           name:  name,
           password: await bcrypt.hash(password, saltRounds),
+          email: email,
         });
         const token = jwt.sign({name}, jwtSecret);
         return res.status(200).json({sucess: "create user",jwt: token});
