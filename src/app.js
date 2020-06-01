@@ -1,34 +1,29 @@
-const express =  require("express");
-const app = express();
-const routes = require("./routes");
+const express = require('express');
 
-//const connection = require("./connection");
+const app = express();
+const routes = require('./routes');
+
 
 require('./database/index');
 
 app.use(express.json());
 app.use(routes);
-app.use((req,res, next) => {
-  const erro = new Error("route not found");
+app.use((req, res, next) => {
+  const erro = new Error('route not found');
   erro.status = 404;
   next(erro);
 });
 
-/*BUG + Misterio no "next(error)" coloquei apenas para o ESLINT parar de apontar que "never used"
-  * Porque simplesmente retirar o next ?, acontece que quando faz isso retorna muito LIXO além do error.
-  *
-  * */
+/* BUG + Misterio no 'next(error)'  ESLINT parar de apontar que 'never used' */
 
-app.use((error, req, res,next ) => {
+app.use((error, req, res, next) => {
   next(error);
   res.status(error.status || 500);
   return res.send({
     erro: {
-      msg: error.message
-    }
+      msg: error.message,
+    },
   });
 });
 
-
 module.exports = app;
-
