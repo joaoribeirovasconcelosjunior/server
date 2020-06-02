@@ -19,13 +19,13 @@ seguindo os padrão REST
 
 ### Melhorias:
 
-[x] - Verificar se o email é valido tanto no login e registro.
-[x] - Fazer melhorar algumas funções
-[x] - remover bugs
-[x] - Subtituir a criptografia que usar o name com o secret pelo ID para ajudar depois
-[-] - opção de login por nome ou usuario talvez...
+1. [x] - Verificar se o email é valido tanto no login e registro.  
+2. [x] - Fazer melhorar algumas funções  
+3. [x] - remover bugs  
+4. [x] - Subtituir a criptografia que usar o name com o secret pelo ID para ajudar depois do decript
+5. [ ] - opção de login por nome ou usuario talvez...  
 
-do decript
+
 
 Como rodar a aplicação.
 
