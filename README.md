@@ -29,8 +29,8 @@ seguindo os padrão REST
 
 Como rodar a aplicação.
 
-```git clone https://github.com/joaoribeirovasconcelosjunior/server.git```
-```npm install```
-```npm start```
+```git clone https://github.com/joaoribeirovasconcelosjunior/server.git```  
+```npm install```  
+```npm start```  
 
 
