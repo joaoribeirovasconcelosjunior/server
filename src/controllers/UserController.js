@@ -2,11 +2,14 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+const validator = require('email-validator');
+
 const saltRounds = 4;
 const jwtSecret = 'SECRET';
 
 
 const User = require('../models/User');
+
 
 module.exports = {
   async index(req, res) {
@@ -21,6 +24,10 @@ module.exports = {
   async login(req, res) {
     try {
       const { password, email } = req.body;
+      if (validator.validate(email) !== true) {
+        return res.status(400).json({ erro: 'email bad format' });
+      }
+
       const user = await User.findAll({
         where: {
           email,
@@ -60,6 +67,10 @@ module.exports = {
   async register(req, res) {
     try {
       const { name, password, email } = req.body;
+      if (validator.validate(email) !== true) {
+        return res.status(400).json({ erro: 'email bad format' });
+      }
+
 
       const user = await User.findAll(
         {
