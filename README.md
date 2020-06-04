@@ -19,18 +19,24 @@ seguindo os padrão REST
 
 ### Melhorias:
 
-1. [x] - Verificar se o email é valido tanto no login e registro.  
-2. [x] - Fazer melhorar algumas funções  
-3. [x] - remover bugs  
+1. [x] - Verificar se o email é valido tanto no login e registro.
+2. [x] - Fazer melhorar algumas funções
+3. [x] - remover bugs
 4. [x] - Subtituir a criptografia que usar o name com o secret pelo ID para ajudar depois do decript
-5. [ ] - opção de login por nome ou usuario talvez...  
+5. [ ] - opção de login por nome ou usuario talvez...
+
+### Melhorias futuras
+
+1. [ ] - sistema de confirmação no email
+2. [ ] - recuperar conta pelo email
+
 
 
 
 Como rodar a aplicação.
 
-```git clone https://github.com/joaoribeirovasconcelosjunior/server.git```  
-```npm install```  
-```npm start```  
+```git clone https://github.com/joaoribeirovasconcelosjunior/server.git```
+```npm install```
+```npm start```
 
 

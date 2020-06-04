@@ -3,6 +3,8 @@ const authMiddleware = require('./middlewares/auth');
 
 const routes = express.Router();
 const UserController = require('./controllers/UserController');
+const bodyParser = require('body-parser');
+
 
 routes.post('/register', UserController.register);
 routes.post('/login', UserController.login);
